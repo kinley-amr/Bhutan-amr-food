@@ -5,7 +5,7 @@ This repository contains antimicrobial resistance (AMR) data and supporting anal
 ## Contents
 - data/: raw and processed data files (CSV/Excel)
 - notebooks/: Jupyter notebooks with exploratory analysis and figures
-- scripts/: data processing and analysis scripts (Python/R)
+- scripts/: data processing and analysis scripts (R/Python)
 - results/: generated figures, summary tables, and reports
 - README.md: this file
 
@@ -15,22 +15,33 @@ This repository contains antimicrobial resistance (AMR) data and supporting anal
    git clone https://github.com/kinley-amr/Bhutan-amr-food.git
    cd Bhutan-amr-food
 
-2. (Optional) Create a virtual environment and install dependencies:
+2. (Optional) Create a virtual environment and install dependencies (R example):
 
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
+   # using renv (recommended)
+   R -e "install.packages('renv'); renv::init()"
+   R -e "renv::restore()"
 
-3. Explore the notebooks or run scripts in the scripts/ folder. Example (run a script):
+   Or install packages manually in R:
+   install.packages(c('readr','dplyr','ggplot2'))
 
-   python scripts/process_data.py --input data/raw/samples.csv --output data/processed/samples_clean.csv
+3. Explore the notebooks or run scripts in the scripts/ folder. Example (run an R script):
 
-## Example: load data in Python
+   Rscript scripts/process_data.R --input data/raw/samples.csv --output data/processed/samples_clean.csv
 
-```python
-import pandas as pd
-df = pd.read_csv('data/processed/samples_clean.csv')
-print(df.head())
+## Example: load data in R
+
+```r
+# readr example
+library(readr)
+
+# adjust the path as needed
+df <- read_csv('data/processed/samples_clean.csv')
+
+# show first rows
+print(head(df))
+
+# a quick summary
+summary(df)
 ```
 
 ## Project structure
