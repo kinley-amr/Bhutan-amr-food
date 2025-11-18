@@ -1,6 +1,6 @@
 # Bhutan AMR Food Data
 
-This repository contains antimicrobial resistance (AMR) data and supporting analysis for food samples collected in Bhutan. It is intended to store raw and processed datasets, analysis scripts, and reproducible notebooks used to explore AMR patterns in food sources.
+This repository contains antimicrobial resistance (AMR) data and supporting analysis for local chicken samples collected from the meat retail shops in Bhutan. The purpose is to load raw data, process datasets, analysis scripts, and reproducible notebooks used to explore AMR patterns in food sources.
 
 ## Contents
 - data/: raw and processed data files (CSV/Excel)
